@@ -1,0 +1,14 @@
+/* ==========================================================================
+   HORIZONTAL RULE
+   ========================================================================== */
+
+   hr, hr.wp-block-separator {
+    display: block;  // border: none;
+    margin: 10px auto;
+    padding: 0;
+    clear: both;
+    width: 100%;
+    border-top: 0;
+    margin: 60px auto 20px auto;
+    height: 1px;
+  }

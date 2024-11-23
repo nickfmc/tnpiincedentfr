@@ -1,0 +1,16 @@
+{
+    "name": "acf/updates-block",
+    "title": "Updates Repeater Block",
+    "description": "A custom block for displaying incident updates",
+    "icon": "admin-comments",
+    "keywords": ["incident", "updates", "accessibility"],
+    "category": "my-blocks",
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "updates.php"
+    },
+    "example": {
+        "attributes": {}
+    },
+    "align": "full"
+}

@@ -1,0 +1,40 @@
+/* ==========================================================================
+   MAIN LOGO
+   ========================================================================== */
+
+.c-logo-main,.c-modal-nav-logo {
+  position: absolute;
+  top: 15px;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  @media(width >= 360px) {
+    top: 14px;
+    font-size: 20px;
+  
+  } 
+  @media(width >= $bp-medium) {
+   font-size: 24px;
+    top: 10px;
+  } 
+
+  z-index: z(default);
+  & a {
+    display: block;
+    &:focus, &:hover {
+      outline-color: $color-orange-dark !important;
+    }
+  }
+  & img {
+    display: block;
+    width: 150px;
+    height: auto;
+    max-height: $page-header-height;
+    @media (width >= $bp-medium) {
+      width: 190px;
+     } 
+  }
+}
