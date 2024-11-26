@@ -55,7 +55,7 @@ if( $is_preview ) {
             <?php $count = $total_updates - $index; ?>
             <div>
             <div class="o-wrapper-wide">
-                <h2 class="h4-style">Update #<?php echo $count; ?></h2>
+                <h2 class="h4-style">Mise à jour #<?php echo $count; ?></h2>
                 <span class="c-updates-timestamp"><?php echo $update['time_stamp']; ?> EST</span>
                 <?php echo $update['update']; ?>
     

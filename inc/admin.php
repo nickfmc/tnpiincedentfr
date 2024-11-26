@@ -109,7 +109,9 @@ function flexdev_flush_rewrite_rules()
 // updated to proper 'enqueue' method
 // http://codex.wordpress.org/Plugin_API/Action_Reference/login_enqueue_scripts
 function gdt_login_css() {
-  wp_enqueue_style( 'gdt_login_css', get_template_directory_uri() . '/inc/login.css', false );
+  $css_path = get_template_directory() . '/inc/login.css';
+  $version = filemtime($css_path);
+  wp_enqueue_style( 'gdt_login_css', get_template_directory_uri() . '/inc/login.css', false, $version );
 }
 
 // changing the logo link from wordpress.org to your site

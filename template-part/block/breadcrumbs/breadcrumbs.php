@@ -41,7 +41,7 @@ if( $is_preview ) {
 <?php
     // Display Yoast SEO breadcrumbs
     if ( function_exists('yoast_breadcrumb') ) {
-        yoast_breadcrumb( '<nav aria-label="breadcrumbs" id="breadcrumbs">','</nav>' );
+        yoast_breadcrumb( '<nav aria-label="fil d\'ariane" id="breadcrumbs">','</nav>' );
       }
 ?>
 

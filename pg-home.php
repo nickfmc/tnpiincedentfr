@@ -18,7 +18,7 @@ Template Name: Home Page
             <div class="c-incident-body">
               <?php if( get_field('incident_summary', 'options') ) { echo '<p class="has-large-font-size">' . get_field('incident_summary', 'options') . '</p>'; }?>
           
-              <h2 class="h4-style is-style-u-eyebrow-heading">Current Status</h2>
+              <h2 class="h4-style is-style-u-eyebrow-heading">État actuel</h2>
             <?php
             if (have_rows('updates', 'options')):
                 $updates = array();
@@ -49,11 +49,11 @@ Template Name: Home Page
             endif;
             ?>
           
-            <div class="c-btn-primary"><a href="/updates">View Updates</a></div>
+            <div class="c-btn-primary"><a href="/updates">Voir les mises à jour</a></div>
           
           
           
-            <?php if( get_field('key_actions_taken', 'options') ) { echo '<h2 class="mt-14 h4-style is-style-u-eyebrow-heading">Key Actions Taken</h2>'; }?>
+            <?php if( get_field('key_actions_taken', 'options') ) { echo '<h2 class="mt-14 h4-style is-style-u-eyebrow-heading">Actions clés entreprises</h2>'; }?>
           
             <?php if( have_rows('key_actions_taken', 'options') ): ?>
               <ul>

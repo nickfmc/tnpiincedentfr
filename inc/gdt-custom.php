@@ -159,7 +159,7 @@ function my_acf_op_init() {
             'page_title' 	=> 'Updates',
             'menu_title'	=> 'Updates',
             'menu_slug' 	=> 'updates',
-            'capability'	=> 'edit_acf_options', // Changed to admin capability for testing
+            'capability'	=> 'manage_options', // Changed to admin capability for testing
             'redirect'		=> false
         ));
     }

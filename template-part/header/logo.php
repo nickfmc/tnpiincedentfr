@@ -1,3 +1,3 @@
 <div class="c-logo-main">
-    TNPI Response Centre
+Centre de réponse PTNI
 </div> <!-- /c-main-logo --> 

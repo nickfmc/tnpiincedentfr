@@ -15,7 +15,7 @@ html {
 
 body {
   color: $text-color;
-  font-family: $font-primary;
+  font-family: $font-primary; 
   line-height: $line-height-normal;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
@@ -31,8 +31,8 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 1px solid $focus-color;
-  outline-offset: 0px;
+  outline: 1px solid #F26531 !important; 
+  outline-offset: 0px; 
   
 }
 
