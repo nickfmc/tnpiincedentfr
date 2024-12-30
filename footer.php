@@ -1,8 +1,8 @@
-  <footer class="o-section c-page-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+  <footer id="c-page-footer" class="o-section c-page-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
     <div class="c-page-footer-topper">
       <div class="o-wrapper-wide">
         <p class="is-style-u-eyebrow-heading u-ttu">
-        Ligne d&rsquo;urgence PTNI: <a href="tel:18003610608" aria-label="Appeler la ligne d'urgence de PTNI au 1-800-361-0608">1-800-361-0608</a>
+        Ligne d&rsquo;urgence PTNI: <a href="tel:18003610608" aria-label="Appeler la ligne d'urgence de PTNI au 1 800 361 0608">1-800-361-0608</a>
         </p>
       </div>
     </div>

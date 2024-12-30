@@ -56,7 +56,17 @@ if( $is_preview ) {
             <div>
             <div class="o-wrapper-wide">
                 <h2 class="h4-style">Mise à jour #<?php echo $count; ?></h2>
-                <span class="c-updates-timestamp"><?php echo $update['time_stamp']; ?> EST</span>
+               <span class="c-updates-timestamp">
+                   <?php 
+                   $formatter = new IntlDateFormatter(
+                       'fr_FR',
+                       IntlDateFormatter::LONG,
+                       IntlDateFormatter::SHORT,
+                       'America/New_York'  // EST timezone
+                   );
+                   echo $formatter->format(strtotime($update['time_stamp'])); ?> EST
+               </span>
+               
                 <?php echo $update['update']; ?>
     
                 <?php if( $update['gallery'] ): ?>

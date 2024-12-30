@@ -129,26 +129,6 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 add_action('acf/init', 'my_acf_op_init');
 function my_acf_op_init() {
     // Add this line to test if the function is running
@@ -346,7 +326,8 @@ function disable_homepage_editor() {
 add_action('admin_init', 'disable_homepage_editor');
 
 function show_homepage_message() {
-    echo '<div class="homepage-notice"><p>The homepage content is dynamically created visit the <a href="/wp-admin/admin.php?page=updates">Updates section</a> to edit your content</p></div>';
+echo '<div class="homepage-notice"><p>Le contenu de la page d\'accueil est généré dynamiquement <a href="/wp-admin/admin.php?page=updates">cliquez ici</a> pour modifier votre contenu</p></div>';
+
 }
 
 function add_custom_admin_css() {
@@ -371,7 +352,7 @@ function add_custom_admin_css() {
 
 function enqueue_custom_editor_assets() {
     global $post;
-    if ($post && $post->ID == 15) {
+    if ($post && $post->ID == 28) {
         wp_enqueue_script(
             'custom-editor-notice',
             get_template_directory_uri() . '/custom-editor-notice.js',

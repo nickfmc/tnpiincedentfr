@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="fr-CA">
 
 <head>
   <meta charset="utf-8">
@@ -26,11 +26,19 @@
     body_class($classes); 
 ?> itemscope itemtype="https://schema.org/WebPage">
 
+<!-- Skip links should be the first focusable elements -->
+<div class="skip-links">
+<a href="#main-content" class="skip-link">Passer au contenu principal</a>
+<a href="#site-navigation" class="skip-link">Passer à la navigation principale</a>
+<a href="#c-page-footer" class="skip-link">Passer au pied de page</a>
+
+</div>
+
   <header id="c-page-header" class="o-section c-page-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
     <div class="c-page-header-upper">
       <div class="o-wrapper-wide">
       <div class="c-page-header-upper-inner" role="contentinfo" aria-label="Contact d'urgence">
-            <span>Ligne d'urgence: <a href="tel:18003610608" aria-label="Appeler la ligne d'urgence">1-800-361-0608</a></span>
+            <span>Ligne d'urgence : <a href="tel:18003610608" aria-label="Appeler la ligne d'urgence 1 800 361 0608">1-800-361-0608</a></span>
         </div>
       </div>
     </div>
@@ -65,7 +73,7 @@
               <div class="c-modal-nav-header-upper">
                 <div class="o-wrapper-wide">
                   <div class="c-page-header-upper-inner" role="contentinfo" aria-label="Emergency Contact">
-                      <span>Ligne d'urgence: <a href="tel:18003610608" aria-label="Call Emergency Line">1-800-361-0608</a></span>
+                      <span>Ligne d'urgence: <a href="tel:18003610608" aria-label="Appeler la ligne d'urgence 1 800 361 0608">1-800-361-0608</a></span>
                   </div>
                 </div>
               </div>
@@ -80,8 +88,8 @@
                 </div> <!-- /c-main-logo -->
                 <div class="c-lang-select  c-lang-select--mobile-menu" role="navigation" aria-label="Language selector">
        
-        <a href="https://response-fr.tnpi.ca/" class="c-lang-select-btn c-lang-select--current" id="lang-fr" aria-label="Select French">FR</a>
-        <a href="https://response.tnpi.ca" class="c-lang-select-btn " id="lang-en" aria-label="Select English">EN</a>
+                <a href="https://response-fr.tnpi.ca/" class="c-lang-select-btn c-lang-select--current" id="lang-fr" aria-label="Sélectionner le français">FR</a>
+                <a href="https://response.tnpi.ca" class="c-lang-select-btn " id="lang-en" aria-label="Sélectionner l'anglais">EN</a>
 </div> 
               </div>
                 <?php  gdt_nav_menu( 'mobile-menu', 'c-mobile-menu' ); // Adjust using Menus in WordPress Admin ?>

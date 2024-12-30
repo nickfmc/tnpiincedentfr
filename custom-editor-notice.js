@@ -8,7 +8,7 @@
 
 var CustomNoticePlugin = function() {
     useEffect(function() {
-        var noticeContent = 'To add/edit the incident updates visit <a href="/wp-admin/admin.php?page=updates">the Updates section</a> to edit the content, not this page.';
+    var noticeContent = 'Pour ajouter/modifier les mises à jour des incidents <a href="/wp-admin/admin.php?page=updates">cliquez ici.</a> Le contenu n\'est pas directement modifiable sur cette page.';
 
         dispatch('core/notices').createNotice(
             'info',
@@ -32,17 +32,18 @@ var CustomNoticePlugin = function() {
                 title: __('Important Notice'),
                 initialOpen: true,
             },
-            createElement(
-                'p',
-                {},
-                __('To add/edit the incident updates visit the '),
-                createElement(
-                    'a',
-                    { href: '/wp-admin/admin.php?page=updates' },
-                    __('Updates section')
-                ),
-                __(' to edit the content, not this page.')
-            )
+         createElement(
+             'p',
+             {},
+             __('Pour ajouter/modifier les mises à jour des incidents, visitez '),
+             createElement(
+                 'a',
+                 { href: '/wp-admin/admin.php?page=updates' },
+                 __('mises à jour')
+             ),
+             __(' pour modifier le contenu, pas cette page.')
+         )
+         
         );
     }
 

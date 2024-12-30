@@ -78,7 +78,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 1px solid $focus-color;
+  outline: 2px solid $focus-color;
   outline-offset: 0px;
   
 }
@@ -228,7 +228,7 @@ top: 5px;
       color: $color-blue-light;
     }
     &:focus, &:active, &:visited:focus, &:visited:active {
-      outline: 1px solid $focus-color;
+      outline: 2px solid $focus-color;
 
   }
 }
@@ -270,7 +270,7 @@ top: 5px;
 // ++ menu style (drop down!) +++++++++++++++++++++++++++++++++
 @media (width >= $bp-large) {
   .c-main-menu li:hover ul, 
-  .c-main-menu li.focus ul {
+  .c-main-menu li:focus ul {
     opacity: 1;
     visibility: visible;
 
@@ -319,7 +319,7 @@ top: 5px;
     }
   }
   // .c-main-menu li:hover ul li,
-  // .c-main-menu li.focus ul li {
+  // .c-main-menu li:focus ul li {
   //   max-height: 140px;
   // }
  
@@ -338,19 +338,14 @@ top: 5px;
     border: 1px solid transparent; 
 
     &:focus, &:active, &:visited:focus, &:visited:active {
-      outline: 1px !important;
+      outline: 2px !important;
       outline-color: #F26531 !important;
 
     }
   
   }
 
-  // Increase specificity for debugging
-// .c-main-menu ul li a:focus, 
-// .c-main-menu ul li a:active, .c-main-menu ul li a:visited:focus, .c-main-menu ul li a:visited:active {
-//     outline: 1px solid #F26531 !important; 
-//     outline-offset: 0px;  
-// }
+
 
   .c-main-menu ul ul {
     visibility: visible;

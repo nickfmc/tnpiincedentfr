@@ -49,7 +49,7 @@ Template Name: Home Page
             endif;
             ?>
           
-            <div class="c-btn-primary"><a href="/updates">Voir les mises à jour</a></div>
+            <div class="c-btn-primary"><a href="/mises-a-jour">Voir les mises à jour</a></div>
           
           
           

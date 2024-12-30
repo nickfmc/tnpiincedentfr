@@ -3669,7 +3669,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 1px solid #F26531;
+  outline: 2px solid #F26531 !important;
   outline-offset: 0px;
 }
 
@@ -4899,6 +4899,10 @@ main p + .is-style-u-eyebrow-heading {
   }
 }
 
+.page-id-33 .c-page-footer {
+  margin-top: -1px;
+}
+
 /* ==========================================================================
    HEADER
    ========================================================================== */
@@ -5349,6 +5353,20 @@ main p + .is-style-u-eyebrow-heading {
   margin-bottom: 30px;
 }
 
+.skip-link {
+  position: absolute;
+  top: -100px; /* Hide it by default */
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  z-index: 10000;
+  /* Show on focus for keyboard users */
+}
+.skip-link:focus {
+  top: 0;
+}
+
 /* ==========================================================================
    MAIN LOGO
    ========================================================================== */
@@ -5487,7 +5505,7 @@ main p + .is-style-u-eyebrow-heading {
 #search-popup input:focus,
 #search-popup textarea:focus,
 #search-popup select:focus {
-  outline: 1px solid #F26531;
+  outline: 2px solid #F26531;
   outline-offset: 0px;
 }
 
@@ -5643,7 +5661,7 @@ main p + .is-style-u-eyebrow-heading {
     color: #739DD2;
   }
   .c-main-menu > li > a:focus, .c-main-menu > li > a:active, .c-main-menu > li > a:visited:focus, .c-main-menu > li > a:visited:active, .c-main-menu > li > button:focus, .c-main-menu > li > button:active, .c-main-menu > li > button:visited:focus, .c-main-menu > li > button:visited:active {
-    outline: 1px solid #F26531;
+    outline: 2px solid #F26531;
   }
   .c-main-menu > li:hover > a span::after, .c-main-menu > li:hover > button span::after {
     opacity: 1;
@@ -5668,7 +5686,7 @@ main p + .is-style-u-eyebrow-heading {
 }
 @media (width >= 992px) and (width >= 992px) {
   .c-main-menu li:hover ul,
-  .c-main-menu li.focus ul {
+  .c-main-menu li:focus ul {
     opacity: 1;
     visibility: visible;
   }
@@ -5723,7 +5741,7 @@ main p + .is-style-u-eyebrow-heading {
     border: 1px solid transparent;
   }
   .c-main-menu ul li a:focus, .c-main-menu ul li a:active, .c-main-menu ul li a:visited:focus, .c-main-menu ul li a:visited:active {
-    outline: 1px !important;
+    outline: 2px !important;
     outline-color: #F26531 !important;
   }
   .c-main-menu ul ul {
@@ -6891,7 +6909,7 @@ html.has-modal-nav-open {
   font-weight: 600;
 }
 .c-mobile-menu a:focus {
-  outline: 1px solid #F26531;
+  outline: 2px solid #F26531;
 }
 
 .c-cl-mobile-nav-footer {
@@ -7095,7 +7113,7 @@ html.has-modal-nav-open {
   padding: 7px 5px !important;
 }
 .c-modal-nav form.c-search-form div .search-submit:focus {
-  outline: 1px solid #F26531;
+  outline: 2px solid #F26531;
 }
 
 /* ==========================================================================
@@ -7301,7 +7319,7 @@ html.has-modal-nav-open {
 }
 
 .error404 .editor-content, .search .editor-content {
-  padding-top: 120px;
+  padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7321,17 +7339,11 @@ html.has-modal-nav-open {
       -ms-grid-row-align: stretch;
       align-self: stretch;
 }
-@media (width >= 767px) {
-  .error404 .editor-content, .search .editor-content {
-    padding-top: 190px;
-  }
-}
 
 .c-404-layout > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: var(--spacing-4xl, 32px);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -7339,7 +7351,6 @@ html.has-modal-nav-open {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: var(--spacing-6xl, 48px);
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
           flex: 1 0 0;
@@ -7356,11 +7367,6 @@ html.has-modal-nav-open {
 }
 .c-404-inner-content > div, .c-search-inner-content > div {
   width: 100%;
-}
-@media (width >= 767px) {
-  .c-404-inner-content > div, .c-search-inner-content > div {
-    width: 75%;
-  }
 }
 
 /* ==========================================================================

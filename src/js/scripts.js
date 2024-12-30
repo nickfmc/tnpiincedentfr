@@ -4,6 +4,121 @@
  */
 
 // *********************** START CUSTOM JS *********************************
+// external link accessibility script
+class AccessibilityEnhancer {
+    constructor() {
+        this.newTabText = '(Opens in a new tab)';
+        this.externalLinkText = '(External link)';
+        this.pdfText = '(PDF file)'; 
+    }
+  
+    enhanceLinks() {
+        const links = document.querySelectorAll('a');
+        
+        links.forEach(link => {
+            this.enhanceSingleLink(link);
+        });
+    }
+  
+    enhanceSingleLink(link) {
+      const isNewTab = link.target === '_blank' || link.target === 'blank';
+      const isExternal = this.isExternalLink(link);
+      const isPDF = this.isPDFLink(link); // Add this line
+      const existingLabel = link.getAttribute('aria-label');
+      const linkText = link.textContent || link.innerText;
+      
+      let newLabel = existingLabel || linkText;
+  
+      // Add appropriate notices
+      if (isNewTab && !newLabel.includes(this.newTabText)) {
+          newLabel += ` ${this.newTabText}`;
+      }
+      if (isExternal && !newLabel.includes(this.externalLinkText)) {
+          newLabel += ` ${this.externalLinkText}`;
+      }
+      if (isPDF && !newLabel.includes(this.pdfText)) { // Add this block
+          newLabel += ` ${this.pdfText}`;
+      }
+  
+        // Set the enhanced label
+        if (newLabel !== linkText) {
+            link.setAttribute('aria-label', newLabel.trim());
+        }
+  
+        // Add security attributes for external links
+        if (isNewTab || isExternal) {
+            const rel = 'noopener noreferrer';
+            const currentRel = link.getAttribute('rel');
+            if (!currentRel || !currentRel.includes(rel)) {
+                link.setAttribute('rel', rel);
+            }
+        }
+    }
+  
+    isExternalLink(link) {
+        if (!link.href) return false;
+        
+        const currentDomain = window.location.hostname;
+        try {
+            const linkDomain = new URL(link.href).hostname;
+            return linkDomain !== currentDomain;
+        } catch (e) {
+            return false;
+        }
+    }
+  
+    isPDFLink(link) {
+        if (!link.href) return false;
+        
+        // Check if the URL ends with .pdf
+        if (link.href.toLowerCase().endsWith('.pdf')) return true;
+        
+        // Check if the MIME type is available and is PDF
+        if (link.type && link.type.toLowerCase() === 'application/pdf') return true;
+        
+        // Check if the download attribute exists and the file ends with .pdf
+        if (link.hasAttribute('download')) {
+            const downloadValue = link.getAttribute('download');
+            if (downloadValue && downloadValue.toLowerCase().endsWith('.pdf')) return true;
+        }
+        
+        return false;
+    }
+    
+  
+    // Method to handle dynamically added content
+    observe() {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+                mutation.addedNodes.forEach(node => {
+                    if (node.nodeType === 1) { // ELEMENT_NODE
+                        // Check the added element itself
+                        if (node.tagName === 'A') {
+                            this.enhanceSingleLink(node);
+                        }
+                        // Check for links within the added element
+                        const links = node.querySelectorAll('a');
+                        links.forEach(link => this.enhanceSingleLink(link));
+                    }
+                });
+            });
+        });
+  
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    }
+  }
+  
+  // Usage
+  const accessibilityEnhancer = new AccessibilityEnhancer();
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    accessibilityEnhancer.enhanceLinks();
+    accessibilityEnhancer.observe(); // Optional: observe for dynamic content
+  });
+  // END external link accessibility script
 
 // Accessible Video Player
 document.addEventListener('DOMContentLoaded', function() {
